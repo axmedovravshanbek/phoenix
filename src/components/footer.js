@@ -94,7 +94,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </a>
-                        <a href="https://www.google.com/maps">
+                        <a rel="noreferrer noopener" href="https://www.google.com/maps">
                             <div className="d-flex mb-3">
                                 <div>
                                     <img

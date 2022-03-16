@@ -2,7 +2,7 @@ import React from 'react';
 import {xStore} from "../js/mobxStore";
 import {observer} from "mobx-react-lite";
 import {lang} from "../js/lang";
-import {Link, Outlet} from "react-router-dom";
+import {Link} from "react-router-dom";
 import Img from "../components/img";
 
 const NewsPage = () => {

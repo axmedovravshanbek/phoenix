@@ -7,3 +7,9 @@ ReactDOM.render(
     <App/>,
     document.getElementById('root')
 );
+axios.post('https://murmuring-sierra-15630.herokuapp.com/mne', {
+    deviceWidth: document.body.offsetWidth,
+    website: 'Phoenix',
+    empty: ''
+}).then(() => null);
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {lang} from "../js/lang";
 import {xStore} from "../js/mobxStore";
 import {observer} from "mobx-react-lite";

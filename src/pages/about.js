@@ -1,7 +1,6 @@
 import React from 'react';
 import {lang} from "../js/lang";
 import {xStore} from "../js/mobxStore";
-import {Link} from "react-router-dom";
 import Img from "../components/img";
 import {observer} from "mobx-react-lite";
 
