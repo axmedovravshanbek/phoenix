@@ -40,7 +40,7 @@ const Footer = () => {
                         </Link>
                         <h6 className="mt-md-5 mt-4 mb-3">{lang.weAreInSocial[xStore.lang]}</h6>
                         <div className="d-flex">
-                            {i.map(({icon, link}) => (
+                            {i.map(({icon, link}, i) => (
                                 <a href={link} key={i} target='_blank' className='me-3 mb-2 d-flex'>
                                     <img src={icon} alt=""/>
                                 </a>
@@ -49,24 +49,24 @@ const Footer = () => {
                         <h6 className="mt-4 mb-3">{lang.copyright[xStore.lang]}</h6>
                         <h6 className="mt-4">{lang.allRights[xStore.lang]}</h6>
                     </div>
-                    <div className="col-xl-2 col-sm-6 col-12 order-1 order-md-2 py-md-3">
+                    <div className="col-xl-2 col-sm-6 col-12 order-1 order-md-3 py-md-3 order-xl-2">
                         <p className="bold mb-3 pb-1">{lang.sections[xStore.lang]}</p>
                         <div className="row">
-                            <Link to='/about' className='mb-3 col-6 col-sm-12 col-lg-6 col-xl-12 d-flex'>
+                            <Link to='/about' className={`mb-3 col-6 col-sm-12 col-lg-6 col-xl-12 d-flex ${xStore.pathname==='about'?'active-link':''}`}>
                                 <h6>{lang.aboutUs[xStore.lang]}</h6>
                             </Link>
-                            <Link to='/products' className='mb-3 col-6 col-sm-12 col-lg-6 col-xl-12 d-flex'>
+                            <Link to='/products' className={`mb-3 col-6 col-sm-12 col-lg-6 col-xl-12 d-flex ${xStore.pathname==='products'?'active-link':''}`}>
                                 <h6>{lang.products[xStore.lang]}</h6>
                             </Link>
-                            <Link to='/partners' className='mb-3 col-6 col-sm-12 col-lg-6 col-xl-12 d-flex'>
+                            <Link to='/partners' className={`mb-3 col-6 col-sm-12 col-lg-6 col-xl-12 d-flex ${xStore.pathname==='partners'?'active-link':''}`}>
                                 <h6>{lang.ourPartners[xStore.lang]}</h6>
                             </Link>
-                            <Link to='/news' className='mb-3 col-6 col-sm-12 col-lg-6 col-xl-12 d-flex'>
+                            <Link to='/news' className={`mb-3 col-6 col-sm-12 col-lg-6 col-xl-12 d-flex ${xStore.pathname==='news'?'active-link':''}`}>
                                 <h6>{lang.news[xStore.lang]}</h6>
                             </Link>
                         </div>
                     </div>
-                    <div className="col-xl-4 col-sm-6 col-12 order-3 order-sm-2 order-md-3 py-md-3">
+                    <div className="col-xl-4 col-sm-6 col-12 order-3 order-sm-2 order-md-2 order-xl-3 py-md-3">
                         <p className="bold mb-3">{lang.addresses[xStore.lang]}</p>
                         <a href="https://www.google.com/maps">
                             <div className="d-flex mb-3">

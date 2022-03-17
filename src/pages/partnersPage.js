@@ -3,10 +3,12 @@ import React from 'react';
 import {xStore} from "../js/mobxStore";
 import {observer} from "mobx-react-lite";
 import {lang} from "../js/lang";
+import BreadCrumb from "../components/breadCrumb";
 
 const PartnersPage = () => {
     return (
         <div className='container z2 home-news'>
+            <BreadCrumb path={[{tag: lang.ourPartners[xStore.lang]}]}/>
             <h2 className='mb-3 mb-lg-4'>{lang.ourPartners[xStore.lang]}</h2>
             <div className="row">
                 {[...Array(36).keys()].map((item, id) => (

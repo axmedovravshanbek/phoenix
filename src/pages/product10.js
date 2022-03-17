@@ -3,11 +3,14 @@ import {xStore} from "../js/mobxStore";
 import {observer} from "mobx-react-lite";
 import {Link, useParams} from "react-router-dom";
 import Img from "../components/img";
+import BreadCrumb from "../components/breadCrumb";
+import {lang} from "../js/lang";
 
 const Product10 = () => {
     const {category} = useParams();
     return (
         <div className='container z2 catalog'>
+            <BreadCrumb path={[{tag: lang.products[xStore.lang], link: '/products'}, {tag:xStore.catalog.filter(i => i.route === category)[0][xStore.lang]}] }/>
             <h2 className='mb-4'>{xStore.catalog.filter(i => i.route === category)[0][xStore.lang]}</h2>
             <div className="row">
                 {xStore.products.map((item, id) => (

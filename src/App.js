@@ -21,14 +21,15 @@ const App = () => {
     setTimeout(() => {
         setLoading(false)
     }, 2000);
-    if (loading) {
-        return <Loading/>
-    }
+    // if (loading) {
+    //     return <Loading/>
+    // }
     return (
         <div>
             <BrowserRouter>
                 <ScrollToTop>
                     <TopNav/>
+                    <div className="py-5"/>
                     <div className='position-relative pt-5'>
                         <div className='position-absolute top-0 z0 h-100 w-100'>
                             <div className="container lines h-100">

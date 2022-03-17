@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Img = ({src,style, className, width, height}) => {
-    console.log(style);
     return (
         <div style={{width, height}} className={`${className} skeleton`}>
             <div style={{

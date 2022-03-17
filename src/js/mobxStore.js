@@ -1,6 +1,7 @@
 import {makeAutoObservable} from "mobx";
 class Store {
     lang = localStorage.getItem('lang') || 'en';
+    pathname = '';
     news = [
         {
             image: 'https://res.cloudinary.com/dm96pyie3/image/upload/v1647355561/phoenix/z9u7ysedzflh7o0iwj0t.png',
@@ -251,6 +252,9 @@ class Store {
     setLang(lang) {
         this.lang = lang;
         localStorage.setItem('lang', lang)
+    }
+    setPathname(pathname) {
+        this.pathname = pathname;
     }
 }
 

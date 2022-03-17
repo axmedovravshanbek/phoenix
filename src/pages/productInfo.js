@@ -4,10 +4,11 @@ import {lang} from "../js/lang";
 import {xStore} from "../js/mobxStore";
 import {observer} from "mobx-react-lite";
 import Img from "../components/img";
+import BreadCrumb from "../components/breadCrumb";
 
 const ProductInfo = () => {
     const [selected, setSelected] = useState(0);
-    const {n} = useParams();
+    const {category, n} = useParams();
     const filters = ['', 'saturate(8)', 'contrast(200%)', 'hue-rotate(90deg)'];
     const data = [
         {key1: 'Reference no.', val: 'BP0743287_UP'},
@@ -21,6 +22,19 @@ const ProductInfo = () => {
     ];
     return (
         <div className='container z2'>
+            <BreadCrumb path={[
+                {
+                    tag: lang.products[xStore.lang],
+                    link: '/products'
+                },
+                {
+                    tag: xStore.catalog.filter(i => i.route === category)[0][xStore.lang],
+                    link: `/products/${xStore.catalog.filter(i => i.route === category)[0].route}`
+                },
+                {
+                    tag: xStore.products[n].title
+                },
+            ]}/>
             <h2 className='mb-4'>{lang.productInfo[xStore.lang]}</h2>
             <div className="row">
                 <div className="col-md-6">
@@ -30,13 +44,11 @@ const ProductInfo = () => {
                                 <div onClick={() => setSelected(i)}
                                      style={{borderColor: i === selected ? '#F39025' : '#EBEBEB', marginBottom: 12,}}
                                      key={i} className='bx1 by1 w-100 py-1'>
-                                    <Img src={xStore.products[n].image} width='100%' height={82}
-                                         className='w-100'
-
+                                    <Img src={xStore.products[n].image} width='100%' height={82} className='w-100'
                                          style={{
-                                        filter: f,
-                                        cursor: 'pointer',
-                                    }}/>
+                                             filter: f,
+                                             cursor: 'pointer',
+                                         }}/>
                                 </div>
                             ))}
                         </div>

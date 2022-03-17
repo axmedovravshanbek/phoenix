@@ -3,10 +3,12 @@ import {lang} from "../js/lang";
 import {xStore} from "../js/mobxStore";
 import Img from "../components/img";
 import {observer} from "mobx-react-lite";
+import BreadCrumb from "../components/breadCrumb";
 
 const About = () => {
     return (
         <div className='container z2'>
+            <BreadCrumb path={[ {tag: lang.aboutUs[xStore.lang]}]}/>
             <h2 className='mb-4'>{lang.aboutUs[xStore.lang]}</h2>
             <div className="row">
                 <div className='col-lg-8 offset-lg-2'>
@@ -34,7 +36,7 @@ const About = () => {
                                 <h6 className="p-5">{lang.ups[2][xStore.lang]}</h6>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-6 mx-1 my-lg-0">
+                        <div className="col-lg-3 col-6 mx-1 mx-lg-0">
                             <div
                                 className="circle bg-white position-static d-flex justify-content-center align-items-center bo-color">
                                 <h6 className="p-5">{lang.ups[3][xStore.lang]}</h6>

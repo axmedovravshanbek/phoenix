@@ -5,7 +5,7 @@ import {observer} from "mobx-react-lite";
 
 const OurServices = () => {
     return (
-        <div className='container our-services mt-5 mb-120'>
+        <div className='container our-services mt-5 pt-3 pt-lg-5 mb-120'>
             <h2 className='mb-32'>{lang.ourServices[xStore.lang]}</h2>
             <div className='row justify-content-center'>
                 {xStore.services.map((item, id) => (

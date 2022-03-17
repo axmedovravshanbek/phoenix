@@ -3,10 +3,12 @@ import {xStore} from "../js/mobxStore";
 import {observer} from "mobx-react-lite";
 import {Link} from "react-router-dom";
 import {lang} from "../js/lang";
+import BreadCrumb from "../components/breadCrumb";
 
 const ProductCircles = () => {
     return (
         <div className='container z2 catalog'>
+            <BreadCrumb path={[{tag: lang.products[xStore.lang], link: '/news'}]}/>
             <h2 className='mb-4'>{lang.productCatalog[xStore.lang]}</h2>
             <div className="row">
                 {xStore.catalog.map((item, id) => (

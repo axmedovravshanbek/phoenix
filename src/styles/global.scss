@@ -42,20 +42,23 @@ $orange: #F39025;
     }
   }
 }
-.skeleton{
+
+.skeleton {
   background-image: linear-gradient(90deg, #eee 0, #fff 100px, #eee 200px);
   background-size: 1628px;
   animation: skeletons 1s linear infinite;
 }
+
 @keyframes skeletons {
-  from{
+  from {
     background-position: -128px;
   }
-  to{
+  to {
     background-position: 1500px;
   }
 }
-.lang-selector  {
+
+.lang-selector {
   h5 {
     cursor: pointer;
     color: $orange;
@@ -240,6 +243,7 @@ $orange: #F39025;
   }
 
 }
+
 .circle {
   padding: 50% 0;
   width: 100%;
@@ -377,13 +381,14 @@ $orange: #F39025;
 }
 
 .info {
-  .circle {
+  .semicircle {
     position: absolute;
-    margin: 0 auto;
-    width: 100%;
-    padding-top: 100%;
+    right: 32px;
+    width: 450px;
+    z-index: 0;
+    padding-top: 450px;
     border-radius: 500px;
-    border: 1px solid $border-color;
+    border: 1px solid $bebebe;
   }
 
   .info-texts {
@@ -396,8 +401,69 @@ $orange: #F39025;
   }
 
   .truck-image {
+    width: 50%;
     //position: absolute;
     //top: 120px;
+  }
+}
+
+.send-button {
+  position: relative;
+
+  .wave {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border: 1px solid $orange;
+    border-radius: 50%;
+    z-index: 0;
+    animation: waving 3s linear infinite;
+  }
+
+  .wave:nth-child(2) {
+    animation-delay: 1s;
+  }
+
+  .wave:nth-child(3) {
+    animation-delay: 2s;
+  }
+}
+
+.breadcrumb-item.active {
+  color: $orange !important;
+}
+
+.active-link {
+  color: $orange !important;
+}
+
+.breadcrumb-item {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  width: 32px;
+  height: 24px;
+  background-image: url('https://res.cloudinary.com/dm96pyie3/image/upload/v1647519413/phoenix/yxqgyvt6fecfz2jp2l45.svg');
+  padding-right: 0.5rem;
+  color: #6c757d;
+  content: '' !important;
+}
+
+@keyframes waving {
+  from {
+    opacity: 0.5;
+    width: 220px;
+    height: 220px;
+  }
+  to {
+    opacity: 0;
+    width: 700px;
+    height: 700px;
   }
 }
 
@@ -407,9 +473,15 @@ $orange: #F39025;
 
 .partners-slider {
   .swiper-wrapper {
-    //transition-duration: 3s !important;
     transition-timing-function: linear !important;
   }
+}
+
+.btn-orange {
+  margin-top: 24px;
+  cursor: pointer;
+  background: $orange;
+  padding: 16px 38px;
 }
 
 @media (max-width: 992px) {
@@ -434,8 +506,11 @@ $orange: #F39025;
     background: #00000088;
   }
   .truck-image {
-    position: absolute;
-    top: 120px;
+    width: 100% !important;
+    background: red;
+    opacity: 0.4;
+    //position: absolute;
+    //top: 120px;
   }
   .wl100 {
     width: 100%;

@@ -3,11 +3,13 @@ import {useParams} from "react-router-dom";
 import {lang} from "../js/lang";
 import {xStore} from "../js/mobxStore";
 import {observer} from "mobx-react-lite";
+import BreadCrumb from "../components/breadCrumb";
 
 const NewsFull = () => {
     const {id} = useParams();
     return (
         <div className='container z2'>
+            <BreadCrumb path={[ {tag: lang.news[xStore.lang], link:'/news'}, {tag:xStore.news[id].title[xStore.lang]}]}/>
             <h2 className='mb-3 mb-lg-4'>{lang.news[xStore.lang]}</h2>
             <div className="row">
                 <div className="col-xl-6 offset-md-2 col-12 offset-0 col-md-8 offset-xl-3">

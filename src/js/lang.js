@@ -14,6 +14,7 @@ export const lang = {
         uz: 'So\'rov qoldiring va biz tez orada siz bilan bog\'lanamiz',
         ru: 'Оставьте заявку и мы свяжемся с вами в ближайшее время'
     },
+    leaveRequestShort: {en: 'Leave a request', uz: 'So\'rov qoldiring', ru: 'Оставьте заявку'},
     contactWithUs: {en: 'Contact with us', uz: 'Biz bilan bog\'laning', ru: 'Свяжитесь с нами'},
     send: {en: 'Send', uz: 'Yuborish', ru: 'Отправлять'},
     namePlaceholder: {en: 'Name', uz: 'Ismingiz', ru: 'Имя'},
@@ -63,5 +64,6 @@ export const lang = {
             uz: 'Yevropa: Berlin, Osiyo: Istanbul; Amerika: Texas',
             ru: 'Европа: Берлин, Азия: Стамбул; Америка: Техас'
         }
-    ]
+    ],
+    home: {en: 'Home', uz: 'Bosh sahifa', ru: 'Главная'},
 };
