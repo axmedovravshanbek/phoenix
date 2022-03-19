@@ -7,7 +7,7 @@ import BreadCrumb from "../components/breadCrumb";
 
 const PartnersPage = () => {
     return (
-        <div className='container z2 mb-120'>
+        <div className='container z2'>
             <BreadCrumb path={[{tag: lang.ourPartners[xStore.lang]}]}/>
             <h2 className='mb-3 mb-lg-4'>{lang.ourPartners[xStore.lang]}</h2>
             <div className="row">
