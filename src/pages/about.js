@@ -8,7 +8,7 @@ import BreadCrumb from "../components/breadCrumb";
 const About = () => {
     return (
         <div className='container z2'>
-            <BreadCrumb path={[ {tag: lang.aboutUs[xStore.lang]}]}/>
+            <BreadCrumb path={[{tag: lang.aboutUs[xStore.lang]}]}/>
             <h2 className='mb-4'>{lang.aboutUs[xStore.lang]}</h2>
             <div className="row">
                 <div className='col-lg-8 offset-lg-2'>

@@ -409,6 +409,7 @@ $orange: #F39025;
 
 .send-button {
   position: relative;
+  cursor: pointer;
 
   .wave {
     position: absolute;
@@ -416,6 +417,7 @@ $orange: #F39025;
     height: 240px;
     border: 1px solid $orange;
     border-radius: 50%;
+    pointer-events: none !important;
     z-index: 0;
     animation: waving 3s linear infinite;
   }

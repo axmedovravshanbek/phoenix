@@ -14,12 +14,8 @@ const HomeAboutUs = () => {
                 </Link>
             </div>
             <div className='about-img'/>
-            <Img
-                src='https://res.cloudinary.com/dm96pyie3/image/upload/v1647448348/phoenix/gdmrxyeog3wtqazcz5za.png'
-                className='mt-4 mb-32'
-                width='100%'
-                height={457}
-            />
+            <Img src='https://res.cloudinary.com/dm96pyie3/image/upload/v1647448348/phoenix/gdmrxyeog3wtqazcz5za.png'
+                 className='mt-4 mb-32' width='100%' height={457}/>
             <div className="row mb-120">
                 <div className="col-lg-9 mt-lg-4">
                     <h3 className='bold mb-3'>Phoenix Global Trading</h3>

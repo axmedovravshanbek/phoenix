@@ -8,7 +8,7 @@ import BreadCrumb from "../components/breadCrumb";
 
 const NewsPage = () => {
     return (
-        <div className='container z2 home-news'>
+        <div className='container mb-120 z2 home-news'>
             <BreadCrumb path={[{tag: lang.news[xStore.lang]}]}/>
             <h2 className='mb-3 mb-lg-4'>{lang.news[xStore.lang]}</h2>
             <div className="row">
