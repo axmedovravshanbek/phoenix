@@ -7,7 +7,7 @@ const ScrollToTop = (props) => {
     const location = useLocation();
     useEffect(() => {
         xStore.setPathname(location.pathname.split('/')[1]);
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, [location]);
 
     return <>{props.children}</>

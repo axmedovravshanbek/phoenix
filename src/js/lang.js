@@ -29,7 +29,7 @@ export const lang = {
     addresses: {en: 'Addresses', uz: 'Manzillar', ru: 'Адреса'},
     contacts: {en: 'Contacts', uz: 'Kontaktlar', ru: 'Контакты'},
     usa: {en: 'USA', uz: 'AQSH', ru: 'США'},
-    uk: {en: 'UK', uz: 'Buyuk Britaniya', ru: 'Соединенное Королевство'},
+    uk: {en: 'UK', uz: 'Buyuk Britaniya', ru: 'Британия'},
     turkey: {en: 'Turkey', uz: 'Turkiya', ru: 'Турция'},
     weAreInSocial: {en: 'We are in social networks', uz: 'Ijtimoiy tarmoqlarimiz', ru: 'Мы в социальных сетях'},
     copyright: {

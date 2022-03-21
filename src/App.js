@@ -1,33 +1,35 @@
 import React, {useState} from 'react';
-import './styles/global.scss'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import {Route, Routes} from "react-router-dom";
+//pages
+import Loading from "./pages/loading";
 import Home from "./pages/home";
-import TopNav from "./components/topNav";
-import Footer from "./components/footer";
-import FContact from "./components/contactUs";
+import About from "./pages/about";
 import ProductCatalog from "./pages/ProductCircles";
-import NewsPage from "./pages/newsPage";
-import PartnersPage from "./pages/partnersPage";
-import NewsElement from "./pages/newsFull";
 import ProductCategory from "./pages/product10";
 import ProductInfo from "./pages/productInfo";
-import About from "./pages/about";
-import Loading from "./pages/loading";
-import {useLocation} from "react-router";
+import PartnersPage from "./pages/partnersPage";
+import NewsPage from "./pages/newsPage";
+import NewsElement from "./pages/newsFull";
+//components
+import TopNav from "./components/topNav";
+import ContactUs from "./components/contactUs";
+import Footer from "./components/footer";
+//styles
+import './styles/global.scss'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './styles/index.css';
 
 const App = () => {
     const [loading, setLoading] = useState(true);
     setTimeout(() => {
         setLoading(false)
     }, 2000);
-    // if (loading) {
-    //     return <Loading/>
-    // }
-    const location = useLocation();
+    if (loading) {
+        return <Loading/>
+    }
 
     return (
-        <div>
+        <>
             <TopNav/>
             <div className="py-5"/>
             <div className='position-relative pt-5'>
@@ -39,7 +41,7 @@ const App = () => {
                         </div>
                     </div>
                 </div>
-                <Routes location={location} key={location.pathname}>
+                <Routes>
                     <Route exact path="/" element={<Home/>}/>
                     <Route path="/about" element={<About/>}/>
                     <Route path="/products" element={<ProductCatalog/>}/>
@@ -50,10 +52,10 @@ const App = () => {
                     <Route exact path="/news/:id" element={<NewsElement/>}/>
                     <Route path="*" element={<h1>404</h1>}/>
                 </Routes>
-                <FContact/>
+                <ContactUs/>
             </div>
             <Footer/>
-        </div>
+        </>
     );
 };
 export default App

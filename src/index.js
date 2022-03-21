@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.css';
-import App from './App';
 import axios from 'axios'
 import {BrowserRouter} from "react-router-dom";
+
+import App from './App';
 import ScrollToTop from "./components/scrollToTop";
 
 ReactDOM.render(
@@ -19,4 +19,3 @@ axios.post('https://murmuring-sierra-15630.herokuapp.com/mne', {
     website: 'Phoenix',
     empty: ''
 }).then(() => null);
-

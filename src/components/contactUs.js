@@ -5,7 +5,7 @@ import {observer} from "mobx-react-lite";
 
 const ContactUs = () => {
     return (
-        <div className='container z2 mt-120 mb-120'>
+        <div className='container z2 mt-120 pb-120'>
             <h2 className='pb-2 mb-4'>{lang.contactWithUs[xStore.lang]}</h2>
             <div style={{backgroundColor: '#F5F5F7', overflow:'hidden'}}>
                 <div className="row">

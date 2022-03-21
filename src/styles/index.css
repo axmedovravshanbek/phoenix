@@ -131,6 +131,9 @@ a{
 .mb-120{
     margin-bottom: 120px !important;
 }
+.pb-120{
+    padding-bottom: 120px !important;
+}
 .mt-120{
     margin-top: 120px !important;
 }
@@ -163,6 +166,7 @@ a:hover{
     .mb-120{
         margin-bottom: 48px !important;
     }
+    .pb-120{
+        padding-bottom: 48px !important;
+    }
 }
-/*h1 56 64*/
-/*h1 40 48*/

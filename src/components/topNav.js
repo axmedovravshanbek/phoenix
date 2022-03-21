@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
-import {xStore} from "../js/mobxStore";
 import {observer} from 'mobx-react-lite'
-import {lang} from "../js/lang";
-import LangSelector from "./langSelector";
 import {Divide as Hamburger} from 'hamburger-react'
+import {lang} from "../js/lang";
+import {xStore} from "../js/mobxStore";
+import LangSelector from "./langSelector";
 
 const TopNav = () => {
     const [isOpen, setOpen] = useState(false);

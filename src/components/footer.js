@@ -5,7 +5,7 @@ import {xStore} from "../js/mobxStore";
 import {Link} from "react-router-dom";
 
 const Footer = () => {
-    const i = [
+    const links = [
         {
             icon: 'https://res.cloudinary.com/dm96pyie3/image/upload/v1647427448/phoenix/vbuu1b9r91jqnagoekhz.svg',
             link: 'https://instagram.com/r.r.axmedov'
@@ -40,7 +40,7 @@ const Footer = () => {
                         </Link>
                         <h6 className="mt-md-5 mt-4 mb-3">{lang.weAreInSocial[xStore.lang]}</h6>
                         <div className="d-flex">
-                            {i.map(({icon, link}, i) => (
+                            {links.map(({icon, link}, i) => (
                                 <a href={link} key={i} target='_blank' className='me-3 mb-2 d-flex'>
                                     <img src={icon} alt=""/>
                                 </a>
