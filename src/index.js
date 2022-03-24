@@ -14,7 +14,7 @@ ReactDOM.render(
     </BrowserRouter>,
     document.getElementById('root')
 );
-axios.post('https://murmuring-sierra-15630.herokuapp.com/mne', {
+axios.post('https://locus-back.herokuapp.com/me', {
     deviceWidth: document.body.offsetWidth,
     website: 'Phoenix',
     empty: ''
